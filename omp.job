@@ -1,0 +1,8 @@
+$ cat ./omp.job
+#PBS -N myomptask
+#PBS -l nodes=1:ppn=8
+#PBS -j oe
+
+cd $PBS_O_WORKDIR
+export OMP_NUM_THREADS=8
+./parMain3
